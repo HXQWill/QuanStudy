@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/QuanStudy.iml" filepath="$PROJECT_DIR$/QuanStudy.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mvp_login/mvp_login.iml" filepath="$PROJECT_DIR$/mvp_login/mvp_login.iml" />
     </modules>
   </component>
 </project>
