@@ -14,7 +14,6 @@ import com.example.quan.quanstudy.R;
 
 /**
  * Created by xingquan.he on 2017/3/7.
- *
  */
 
 public class LoginActivity extends Activity implements ILoginView, View.OnClickListener {

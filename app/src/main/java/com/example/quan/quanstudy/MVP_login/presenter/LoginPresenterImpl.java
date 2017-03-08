@@ -3,7 +3,6 @@ package com.example.quan.quanstudy.MVP_login.presenter;
 import android.os.Handler;
 import android.os.Looper;
 
-import com.example.quan.quanstudy.MVP_login.model.IUser;
 import com.example.quan.quanstudy.MVP_login.model.User;
 import com.example.quan.quanstudy.MVP_login.view.ILoginView;
 
@@ -14,12 +13,12 @@ import com.example.quan.quanstudy.MVP_login.view.ILoginView;
 public class LoginPresenterImpl implements ILoginPresenter {
 
     private ILoginView mLoginView;
-    private IUser mUser;
-    private Handler mHandler;
+    private User mUser;
+    private Handler mHandler;//模拟登录耗时操作
 
     public LoginPresenterImpl(ILoginView iLoginView) {
         this.mLoginView = iLoginView;
-        mUser = new User("mvp","mvp");
+        mUser = new User("xq.he","mvp");
         mHandler = new Handler(Looper.getMainLooper());
     }
 
@@ -29,9 +28,9 @@ public class LoginPresenterImpl implements ILoginPresenter {
     }
 
     @Override
-    public void doLogin(String name, String passwd) {
+    public void doLogin(String name, String password) {
         Boolean isLoginSuccess = true;
-        final int code = mUser.checkUserValidity(name,passwd);
+        final int code = mUser.checkUserValidity(name,password);
         if (code != 0) {
             isLoginSuccess = false;
         }
