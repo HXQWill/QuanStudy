@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.quan.quanstudy.MVP_login.view.LoginActivity;
+import com.example.quan.quanstudy.ViewDemo.ViewActivity;
 
 /**
  * Created By Quan 2017-3-7
@@ -15,6 +16,7 @@ import com.example.quan.quanstudy.MVP_login.view.LoginActivity;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button mMVPTest;
+    private Button mViewDemo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,18 +29,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initView() {
         mMVPTest = (Button) findViewById(R.id.mvp_btn_main);
+        mViewDemo = (Button) findViewById(R.id.view_btn_main);
     }
 
     private void initOnClickListener() {
         mMVPTest.setOnClickListener(this);
+        mViewDemo.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
+        Intent i;
         switch (v.getId()) {
             case R.id.mvp_btn_main:
-                Intent i = new Intent(MainActivity.this,LoginActivity.class);
+                i = new Intent(MainActivity.this,LoginActivity.class);
                 startActivity(i);
+                break;
+            case R.id.view_btn_main:
+                i = new Intent(MainActivity.this,ViewActivity.class);
+                startActivity(i);
+                break;
+            default:
                 break;
         }
     }

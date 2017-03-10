@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">QuanStudy</string>
     <string name="mvp_test">MVP_Test</string>
+    <string name="view_test">View_Test</string>
 </resources>

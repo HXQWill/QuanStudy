@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MVP_login.view.LoginActivity" />
+        <activity android:name=".ViewDemo.ViewActivity" />
     </application>
 
 </manifest>

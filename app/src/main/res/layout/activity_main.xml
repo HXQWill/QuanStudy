@@ -19,4 +19,11 @@
         android:layout_height="wrap_content"
         android:text="@string/mvp_test"
         />
+
+    <Button
+        android:id="@+id/view_btn_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_test"
+        />
 </LinearLayout>
