@@ -42,15 +42,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent i;
         switch (v.getId()) {
             case R.id.mvp_btn_main:
-                i = new Intent(MainActivity.this,LoginActivity.class);
-                startActivity(i);
+                gotoNextActivity(LoginActivity.class);
                 break;
             case R.id.view_btn_main:
-                i = new Intent(MainActivity.this,ViewActivity.class);
-                startActivity(i);
+                gotoNextActivity(ViewActivity.class);
                 break;
             default:
                 break;
         }
+    }
+
+    private void gotoNextActivity(Class<?> clazz) {
+        Intent intent = new Intent(this, clazz);
+        startActivity(intent);
     }
 }
