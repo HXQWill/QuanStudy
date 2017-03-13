@@ -11,12 +11,13 @@ import android.widget.Toast;
 import com.example.quan.quanstudy.MVP_login.presenter.ILoginPresenter;
 import com.example.quan.quanstudy.MVP_login.presenter.LoginPresenterImpl;
 import com.example.quan.quanstudy.R;
+import com.example.quan.quanstudy.base.BaseActivity;
 
 /**
  * Created by xingquan.he on 2017/3/7.
  */
 
-public class LoginActivity extends Activity implements ILoginView, View.OnClickListener {
+public class LoginActivity extends BaseActivity implements ILoginView, View.OnClickListener {
 
     private EditText mEditUser;
     private EditText mEditPass;
@@ -29,13 +30,17 @@ public class LoginActivity extends Activity implements ILoginView, View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mvp_login);
 
         initView();
         initOnClickListener();
 
         mLoginPresenter = new LoginPresenterImpl(this);
         mProgressBarLogin.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_mvp_login;
     }
 
     private void initView() {
