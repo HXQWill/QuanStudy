@@ -1,4 +1,4 @@
-package com.example.quan.quanstudy.MVP_login.model;
+package com.example.quan.quanstudy.mvpLogin.model;
 
 /**
  * Created by xingquan.he on 2017/3/7.

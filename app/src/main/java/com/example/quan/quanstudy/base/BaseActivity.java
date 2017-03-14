@@ -1,5 +1,6 @@
 package com.example.quan.quanstudy.base;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -13,8 +14,15 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
+        initView();
     }
 
     public abstract int getLayoutId();
 
+    public abstract void initView();
+
+    protected void gotoNextActivity(Class<?> clazz) {
+        Intent intent = new Intent(this, clazz);
+        startActivity(intent);
+    }
 }

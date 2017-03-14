@@ -1,10 +1,10 @@
-package com.example.quan.quanstudy.MVP_login.presenter;
+package com.example.quan.quanstudy.mvpLogin.presenter;
 
 import android.os.Handler;
 import android.os.Looper;
 
-import com.example.quan.quanstudy.MVP_login.model.User;
-import com.example.quan.quanstudy.MVP_login.view.ILoginView;
+import com.example.quan.quanstudy.mvpLogin.model.User;
+import com.example.quan.quanstudy.mvpLogin.view.ILoginView;
 
 /**
  * Created by xingquan.he on 2017/3/7.

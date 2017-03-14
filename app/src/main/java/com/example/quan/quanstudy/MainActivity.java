@@ -5,8 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.quan.quanstudy.MVP_login.view.LoginActivity;
-import com.example.quan.quanstudy.ViewDemo.ViewActivity;
+import com.example.quan.quanstudy.mvpLogin.view.LoginActivity;
+import com.example.quan.quanstudy.transitionHelper.MainTransitionActivity;
+import com.example.quan.quanstudy.viewDemo.ViewActivity;
 import com.example.quan.quanstudy.base.BaseActivity;
 
 /**
@@ -15,14 +16,14 @@ import com.example.quan.quanstudy.base.BaseActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
-    private Button mMVPTest;
+    private Button mMVPDemo;
     private Button mViewDemo;
+    private Button mTransitionDemo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        initView();
         initOnClickListener();
     }
 
@@ -31,14 +32,17 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         return R.layout.activity_main;
     }
 
-    private void initView() {
-        mMVPTest = (Button) findViewById(R.id.mvp_btn_main);
+    @Override
+    public void initView() {
+        mMVPDemo = (Button) findViewById(R.id.mvp_btn_main);
         mViewDemo = (Button) findViewById(R.id.view_btn_main);
+        mTransitionDemo = (Button) findViewById(R.id.transition_btn_main);
     }
 
     private void initOnClickListener() {
-        mMVPTest.setOnClickListener(this);
+        mMVPDemo.setOnClickListener(this);
         mViewDemo.setOnClickListener(this);
+        mTransitionDemo.setOnClickListener(this);
     }
 
     @Override
@@ -50,13 +54,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.view_btn_main:
                 gotoNextActivity(ViewActivity.class);
                 break;
+            case R.id.transition_btn_main:
+                gotoNextActivity(MainTransitionActivity.class);
+                break;
             default:
                 break;
         }
     }
 
-    private void gotoNextActivity(Class<?> clazz) {
-        Intent intent = new Intent(this, clazz);
-        startActivity(intent);
-    }
 }

@@ -1,4 +1,4 @@
-package com.example.quan.quanstudy.ViewDemo;
+package com.example.quan.quanstudy.viewDemo;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -24,12 +24,6 @@ public class ViewActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mViewSimpleLayout = (SimpleLayout) findViewById(R.id.view_sl_inflater);
-        LayoutInflater layoutInflater = LayoutInflater.from(this);
-//        LayoutInflater layoutInflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View simpleViewLayout = layoutInflater.inflate(R.layout.simple_view_layout,null);
-        mViewSimpleLayout.addView(simpleViewLayout);
-
         ViewParent viewParent = mViewSimpleLayout.getParent();
         Toast.makeText(this , viewParent.toString() , Toast.LENGTH_SHORT).show();
     }
@@ -37,5 +31,14 @@ public class ViewActivity extends BaseActivity {
     @Override
     public int getLayoutId() {
         return R.layout.activity_view;
+    }
+
+    @Override
+    public void initView() {
+        mViewSimpleLayout = (SimpleLayout) findViewById(R.id.view_sl_inflater);
+        LayoutInflater layoutInflater = LayoutInflater.from(this);
+//        LayoutInflater layoutInflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View simpleViewLayout = layoutInflater.inflate(R.layout.simple_view_layout,null);
+        mViewSimpleLayout.addView(simpleViewLayout);
     }
 }

@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -15,8 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MVP_login.view.LoginActivity" />
-        <activity android:name=".ViewDemo.ViewActivity" />
+        <activity android:name=".mvpLogin.view.LoginActivity" />
+        <activity android:name=".viewDemo.ViewActivity" />
+        <activity android:name=".transitionHelper.MainTransitionActivity" />
+        <activity android:name=".transitionHelper.image.ImageActivity" />
+        <activity android:name=".transitionHelper.image.ImageDetailActivity" />
     </application>
 
 </manifest>

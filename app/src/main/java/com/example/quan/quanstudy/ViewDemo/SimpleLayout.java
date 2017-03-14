@@ -1,4 +1,4 @@
-package com.example.quan.quanstudy.ViewDemo;
+package com.example.quan.quanstudy.viewDemo;
 
 import android.content.Context;
 import android.util.AttributeSet;

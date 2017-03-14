@@ -1,6 +1,5 @@
-package com.example.quan.quanstudy.MVP_login.view;
+package com.example.quan.quanstudy.mvpLogin.view;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,8 +7,8 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.quan.quanstudy.MVP_login.presenter.ILoginPresenter;
-import com.example.quan.quanstudy.MVP_login.presenter.LoginPresenterImpl;
+import com.example.quan.quanstudy.mvpLogin.presenter.ILoginPresenter;
+import com.example.quan.quanstudy.mvpLogin.presenter.LoginPresenterImpl;
 import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.base.BaseActivity;
 
@@ -31,7 +30,6 @@ public class LoginActivity extends BaseActivity implements ILoginView, View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        initView();
         initOnClickListener();
 
         mLoginPresenter = new LoginPresenterImpl(this);
@@ -43,7 +41,8 @@ public class LoginActivity extends BaseActivity implements ILoginView, View.OnCl
         return R.layout.activity_mvp_login;
     }
 
-    private void initView() {
+    @Override
+    public void initView() {
         mEditUser = (EditText) this.findViewById(R.id.et_login_username);
         mEditPass = (EditText) this.findViewById(R.id.et_login_password);
         mBtnLogin = (Button) this.findViewById(R.id.btn_login_login);

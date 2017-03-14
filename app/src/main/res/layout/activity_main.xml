@@ -26,4 +26,11 @@
         android:layout_height="wrap_content"
         android:text="@string/view_test"
         />
+
+    <Button
+        android:id="@+id/transition_btn_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/transition_test"
+        />
 </LinearLayout>

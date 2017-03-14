@@ -1,4 +1,4 @@
-package com.example.quan.quanstudy.MVP_login.view;
+package com.example.quan.quanstudy.mvpLogin.view;
 
 /**
  * Created by xingquan.he on 2017/3/7.

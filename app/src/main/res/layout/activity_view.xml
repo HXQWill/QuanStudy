@@ -1,7 +1,7 @@
-<com.example.quan.quanstudy.ViewDemo.SimpleLayout
+<com.example.quan.quanstudy.viewDemo.SimpleLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/view_sl_inflater">
 
-</com.example.quan.quanstudy.ViewDemo.SimpleLayout>
+</com.example.quan.quanstudy.viewDemo.SimpleLayout>
