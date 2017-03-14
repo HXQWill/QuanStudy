@@ -7,6 +7,9 @@
     <color name="bg_teal">#009688</color>
     <color name="bg_teal_light">#B2DFDB</color>
     <color name="bg_purple">#673AB7</color>
-    <color name="bg_white">#ffffff</color>
     <color name="bg_yellow">#FFC107</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_select_bg">#f9c2c2</color>
+
 </resources>

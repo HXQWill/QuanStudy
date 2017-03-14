@@ -22,8 +22,9 @@ public class SimpleLayout extends ViewGroup {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        if (getChildCount() > 0) {
-            View childView = getChildAt(0);
+        View childView;
+        for(int i = 0;i < getChildCount();i++){
+            childView = getChildAt(i);
             measureChild(childView, widthMeasureSpec, heightMeasureSpec);
         }
     }
@@ -31,8 +32,9 @@ public class SimpleLayout extends ViewGroup {
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        if (getChildCount() > 0) {
-            View childView = getChildAt(0);
+        View childView;
+        for(int i = 0;i < getChildCount();i++){
+            childView = getChildAt(i);
             childView.layout(0, 0, childView.getMeasuredWidth(), childView.getMeasuredHeight());
         }
     }

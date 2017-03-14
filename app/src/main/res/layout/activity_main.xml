@@ -25,6 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/view_test"
+        android:background="@drawable/item_selector"
         />
 
     <Button
