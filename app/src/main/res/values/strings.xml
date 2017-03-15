@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">QuanStudy</string>
-    <string name="mvp_test">MVP_Test</string>
-    <string name="view_test">View_Test</string>
-    <string name="transition_test">Transition_Test</string>
-    <string name="animator_test">Animator_Test</string>
+    <string name="mvp_demo">MVP_Demo</string>
+    <string name="view_demo">View_Demo</string>
+    <string name="transition_demo">Transition_Demo</string>
+    <string name="animator_demo">Animator_Demo</string>
 </resources>

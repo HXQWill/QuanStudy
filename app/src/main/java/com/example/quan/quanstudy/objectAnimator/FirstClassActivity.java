@@ -1,5 +1,6 @@
 package com.example.quan.quanstudy.objectAnimator;
 
+import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.view.View;
@@ -54,5 +55,32 @@ public class FirstClassActivity extends BaseActivity {
         set.play(animator3).after(animator2);
         set.setDuration(1000);
         set.start();
+    }
+
+    public void dismiass(View view){
+        ObjectAnimator animator = ObjectAnimator.ofFloat(view,"alpha",0f,1f);
+        animator.setDuration(1000);
+        animator.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animator) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animator) {
+                Toast.makeText(FirstClassActivity.this,"onAnimationEnd.",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animator) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animator) {
+
+            }
+        });
+        animator.start();
     }
 }

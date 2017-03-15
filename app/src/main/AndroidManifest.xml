@@ -21,6 +21,8 @@
         <activity android:name=".transitionHelper.image.ImageActivity" />
         <activity android:name=".transitionHelper.image.ImageDetailActivity" />
         <activity android:name=".objectAnimator.FirstClassActivity" />
+        <activity android:name=".objectAnimator.MainAnimatorActivity" />
+        <activity android:name=".objectAnimator.PathActivity" />
     </application>
 
 </manifest>

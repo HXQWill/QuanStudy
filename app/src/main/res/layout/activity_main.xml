@@ -17,28 +17,28 @@
         android:id="@+id/mvp_btn_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/mvp_test"
+        android:text="@string/mvp_demo"
         />
 
     <Button
         android:id="@+id/view_btn_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/view_test"
         android:background="@drawable/item_selector"
+        android:text="@string/view_demo"
         />
 
     <Button
         android:id="@+id/transition_btn_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/transition_test"
+        android:text="@string/transition_demo"
         />
 
     <Button
         android:id="@+id/animator_btn_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/animator_test"
+        android:text="@string/animator_demo"
         />
 </LinearLayout>
