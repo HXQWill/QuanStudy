@@ -1,81 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/h"
-        android:id="@+id/h_iv_path"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        />
+    <com.example.quan.quanstudy.viewDemo.TitleView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.example.quan.quanstudy.viewDemo.TitleView>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/g"
-        android:id="@+id/g_iv_path"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        />
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/f"
-        android:id="@+id/f_iv_path"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/h"
+            android:id="@+id/h_iv_path"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/e"
-        android:id="@+id/e_iv_path"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/g"
+            android:id="@+id/g_iv_path"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/d"
-        android:id="@+id/d_iv_path"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/f"
+            android:id="@+id/f_iv_path"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/c"
-        android:id="@+id/c_iv_path"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/e"
+            android:id="@+id/e_iv_path"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/b"
-        android:id="@+id/b_iv_path"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/d"
+            android:id="@+id/d_iv_path"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/a"
-        android:id="@+id/a_iv_path"
-        android:paddingLeft="3dp"
-        android:paddingTop="3dp"
-        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/c"
+            android:id="@+id/c_iv_path"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/b"
+            android:id="@+id/b_iv_path"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            />
 
-</FrameLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/a"
+            android:id="@+id/a_iv_path"
+            android:paddingLeft="3dp"
+            android:paddingTop="3dp"
+            />
+
+    </FrameLayout>
+</LinearLayout>
+

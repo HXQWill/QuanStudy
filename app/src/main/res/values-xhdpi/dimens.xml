@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="dd_dimen_26px">13.00dp</dimen>
+    <dimen name="dd_dimen_27px">13.50dp</dimen>
+    <dimen name="dd_dimen_28px">14.00dp</dimen>
+    <dimen name="dd_dimen_29px">14.50dp</dimen>
+    <dimen name="dd_dimen_30px">15.00dp</dimen>
+    <dimen name="dd_dimen_31px">15.50dp</dimen>
+    <dimen name="dd_dimen_32px">16.00dp</dimen>
+    <dimen name="dd_dimen_33px">16.50dp</dimen>
+    <dimen name="dd_dimen_34px">17.00dp</dimen>
+    <dimen name="dd_dimen_35px">17.50dp</dimen>
+    <dimen name="dd_dimen_36px">18.00dp</dimen>
+
+    <dimen name="dd_dimen_112px">56.00dp</dimen>
+
+    <dimen name="dd_dimen_220px">110.00dp</dimen>
+
 </resources>

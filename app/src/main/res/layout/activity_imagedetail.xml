@@ -5,6 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <com.example.quan.quanstudy.viewDemo.TitleView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.example.quan.quanstudy.viewDemo.TitleView>
+
     <ImageView
         android:id="@+id/end_iv_image"
         android:layout_width="285dp"

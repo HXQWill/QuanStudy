@@ -4,4 +4,15 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <dimen name="dd_dimen_26px">11.56dp</dimen>
+
+    <dimen name="dd_dimen_30px">15.00dp</dimen>
+    <dimen name="dd_dimen_31px">15.50dp</dimen>
+    <dimen name="dd_dimen_32px">16.00dp</dimen>
+    <dimen name="dd_dimen_33px">16.50dp</dimen>
+    <dimen name="dd_dimen_34px">17.00dp</dimen>
+    <dimen name="dd_dimen_35px">17.50dp</dimen>
+    <dimen name="dd_dimen_36px">18.00dp</dimen>
+
+    <dimen name="dd_dimen_112px">49.78dp</dimen>
+
 </resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dd_dimen_112px"
+    android:background="@color/common_color_ten_c7a770" >
+
+    <ImageView
+        android:id="@+id/back_iv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/dd_dimen_36px"
+        android:paddingRight="@dimen/dd_dimen_30px"
+        android:src="@mipmap/icon_left" />
+
+    <TextView
+        android:id="@+id/content_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="权兴权意"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dd_dimen_34px" />
+
+</RelativeLayout>

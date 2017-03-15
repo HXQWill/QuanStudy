@@ -2,8 +2,8 @@ package com.example.quan.quanstudy.viewDemo;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewParent;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.quan.quanstudy.R;
@@ -16,7 +16,7 @@ import com.example.quan.quanstudy.base.BaseActivity;
  * 绘制流程 http://blog.csdn.net/hxqneuq2012/article/details/60970595
  */
 
-public class ViewActivity extends BaseActivity {
+public class SimpleActivity extends BaseActivity {
 
     private SimpleLayout mViewSimpleLayout;
 
@@ -30,7 +30,7 @@ public class ViewActivity extends BaseActivity {
 
     @Override
     public int getLayoutId() {
-        return R.layout.activity_view;
+        return R.layout.activity_view_simple;
     }
 
     @Override
@@ -38,7 +38,10 @@ public class ViewActivity extends BaseActivity {
         mViewSimpleLayout = (SimpleLayout) findViewById(R.id.view_sl_inflater);
         LayoutInflater layoutInflater = LayoutInflater.from(this);
 //        LayoutInflater layoutInflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View simpleViewLayout = layoutInflater.inflate(R.layout.simple_view_layout,null);
-        mViewSimpleLayout.addView(simpleViewLayout);
+        RelativeLayout simpleViewLayout = (RelativeLayout)layoutInflater.inflate(R.layout.simple_view_layout,null);
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(getResources().getDimensionPixelSize(R.dimen.dd_dimen_220px), getResources().getDimensionPixelSize(R.dimen.dd_dimen_220px));
+//        params.addRule(RelativeLayout.CENTER_VERTICAL);
+//        params.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        mViewSimpleLayout.addView(simpleViewLayout,params);
     }
 }

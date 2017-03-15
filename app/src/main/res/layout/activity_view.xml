@@ -1,7 +1,26 @@
-<com.example.quan.quanstudy.viewDemo.SimpleLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/view_sl_inflater">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-</com.example.quan.quanstudy.viewDemo.SimpleLayout>
+    <com.example.quan.quanstudy.viewDemo.TitleView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.example.quan.quanstudy.viewDemo.TitleView>
+
+    <Button
+        android:id="@+id/simple_btn_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simple View" />
+    <Button
+        android:id="@+id/diy_btn_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Three Diy View" />
+
+</LinearLayout>

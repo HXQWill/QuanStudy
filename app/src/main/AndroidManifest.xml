@@ -11,18 +11,19 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".mvpLogin.view.LoginActivity" />
-        <activity android:name=".viewDemo.ViewActivity" />
         <activity android:name=".transitionHelper.MainTransitionActivity" />
         <activity android:name=".transitionHelper.image.ImageActivity" />
         <activity android:name=".transitionHelper.image.ImageDetailActivity" />
         <activity android:name=".objectAnimator.FirstClassActivity" />
         <activity android:name=".objectAnimator.MainAnimatorActivity" />
         <activity android:name=".objectAnimator.PathActivity" />
+        <activity android:name=".viewDemo.MainViewActivity" />
+        <activity android:name=".viewDemo.SimpleActivity" />
+        <activity android:name=".viewDemo.ThreeDiyViewActivity" />
     </application>
 
 </manifest>

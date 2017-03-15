@@ -7,7 +7,7 @@ import android.widget.Button;
 import com.example.quan.quanstudy.mvpLogin.view.LoginActivity;
 import com.example.quan.quanstudy.objectAnimator.MainAnimatorActivity;
 import com.example.quan.quanstudy.transitionHelper.MainTransitionActivity;
-import com.example.quan.quanstudy.viewDemo.ViewActivity;
+import com.example.quan.quanstudy.viewDemo.MainViewActivity;
 import com.example.quan.quanstudy.base.BaseActivity;
 
 /**
@@ -55,7 +55,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 gotoNextActivity(LoginActivity.class);
                 break;
             case R.id.view_btn_main:
-                gotoNextActivity(ViewActivity.class);
+                gotoNextActivity(MainViewActivity.class);
                 break;
             case R.id.transition_btn_main:
                 gotoNextActivity(MainTransitionActivity.class);
