@@ -47,4 +47,11 @@
         android:layout_height="wrap_content"
         android:text="@string/animator_demo"
         />
+
+    <Button
+        android:id="@+id/design_btn_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/design_demo"
+        />
 </LinearLayout>

@@ -24,6 +24,9 @@
         <activity android:name=".viewDemo.MainViewActivity" />
         <activity android:name=".viewDemo.SimpleActivity" />
         <activity android:name=".viewDemo.ThreeDiyViewActivity" />
+        <activity android:name=".design.MainDesignActivity" />
+        <activity android:name=".design.FloatingActionBarActivity" />
+        <activity android:name=".design.ScrollActivity" />
     </application>
 
 </manifest>

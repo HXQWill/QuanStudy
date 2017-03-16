@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.quan.quanstudy.design.MainDesignActivity;
 import com.example.quan.quanstudy.mvpLogin.view.LoginActivity;
 import com.example.quan.quanstudy.objectAnimator.MainAnimatorActivity;
 import com.example.quan.quanstudy.transitionHelper.MainTransitionActivity;
@@ -20,6 +21,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button mViewDemo;
     private Button mTransitionDemo;
     private Button mObjectAnimatorDemo;
+    private Button mDesignDemo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mViewDemo = (Button) findViewById(R.id.view_btn_main);
         mTransitionDemo = (Button) findViewById(R.id.transition_btn_main);
         mObjectAnimatorDemo = (Button) findViewById(R.id.animator_btn_main);
+        mDesignDemo = (Button) findViewById(R.id.design_btn_main);
     }
 
     private void initOnClickListener() {
@@ -46,6 +49,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mViewDemo.setOnClickListener(this);
         mTransitionDemo.setOnClickListener(this);
         mObjectAnimatorDemo.setOnClickListener(this);
+        mDesignDemo.setOnClickListener(this);
     }
 
     @Override
@@ -62,6 +66,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.animator_btn_main:
                 gotoNextActivity(MainAnimatorActivity.class);
+                break;
+            case R.id.design_btn_main:
+                gotoNextActivity(MainDesignActivity.class);
                 break;
             default:
                 break;

@@ -4,4 +4,5 @@
     <string name="view_demo">View_Demo</string>
     <string name="transition_demo">Transition_Demo</string>
     <string name="animator_demo">Animator_Demo</string>
+    <string name="design_demo">Design_Demo</string>
 </resources>
