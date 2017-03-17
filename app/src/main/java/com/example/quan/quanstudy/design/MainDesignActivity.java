@@ -15,6 +15,7 @@ import com.example.quan.quanstudy.base.BaseActivity;
 public class MainDesignActivity extends BaseActivity implements View.OnClickListener{
     private Button mFabBtn;
     private Button mScrollBtn;
+    private Button mCollapsingBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +33,13 @@ public class MainDesignActivity extends BaseActivity implements View.OnClickList
     public void initView() {
         mFabBtn = (Button) findViewById(R.id.fab_btn_design);
         mScrollBtn = (Button) findViewById(R.id.scroll_btn_design);
+        mCollapsingBtn = (Button) findViewById(R.id.collapsing_btn_design);
     }
 
     private void initOnClickListener() {
         mFabBtn.setOnClickListener(this);
         mScrollBtn.setOnClickListener(this);
+        mCollapsingBtn.setOnClickListener(this);
     }
 
     public void onClick(View view) {
@@ -46,6 +49,9 @@ public class MainDesignActivity extends BaseActivity implements View.OnClickList
                 break;
             case R.id.scroll_btn_design:
                 gotoNextActivity(ScrollActivity.class);
+                break;
+            case R.id.collapsing_btn_design:
+                gotoNextActivity(CollapsingActivity.class);
                 break;
             default:
                 break;
