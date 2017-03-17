@@ -28,6 +28,7 @@
         <activity android:name=".design.FloatingActionBarActivity" />
         <activity android:name=".design.ScrollActivity" />
         <activity android:name=".design.CollapsingActivity" />
+        <activity android:name=".design.tablayout.TabLayoutActivity" />
     </application>
 
 </manifest>
