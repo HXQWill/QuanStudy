@@ -3,9 +3,9 @@ package com.example.quan.quanstudy.transitionHelper.image;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.example.quan.quanlibrary.transitionsHelper.TransitionsHeleper;
-import com.example.quan.quanlibrary.transitionsHelper.bean.InfoBean;
-import com.example.quan.quanlibrary.transitionsHelper.method.ColorShowMethod;
+import com.example.quan.quanlibrary.transition_helper.TransitionsHeleper;
+import com.example.quan.quanlibrary.transition_helper.bean.InfoBean;
+import com.example.quan.quanlibrary.transition_helper.method.ColorShowMethod;
 import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.transitionHelper.BaseTransitionActivity;
 

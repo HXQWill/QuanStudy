@@ -3,7 +3,7 @@ package com.example.quan.quanstudy.transitionHelper.image;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.quan.quanlibrary.transitionsHelper.TransitionsHeleper;
+import com.example.quan.quanlibrary.transition_helper.TransitionsHeleper;
 import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.transitionHelper.BaseTransitionActivity;
 
