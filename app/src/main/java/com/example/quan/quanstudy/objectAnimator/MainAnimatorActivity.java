@@ -11,6 +11,7 @@ public class MainAnimatorActivity extends BaseActivity implements View.OnClickLi
 
     private Button mFirstBtn;
     private Button mPathBtn;
+    private Button mFireBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +29,13 @@ public class MainAnimatorActivity extends BaseActivity implements View.OnClickLi
     public void initView() {
         mFirstBtn = (Button) findViewById(R.id.first_btn_animator);
         mPathBtn = (Button) findViewById(R.id.path_btn_animator);
+        mFireBtn = (Button) findViewById(R.id.fire_btn_animator);
     }
 
     private void initOnClickListener() {
         mFirstBtn.setOnClickListener(this);
         mPathBtn.setOnClickListener(this);
+        mFireBtn.setOnClickListener(this);
     }
 
     public void onClick(View view) {
@@ -42,6 +45,9 @@ public class MainAnimatorActivity extends BaseActivity implements View.OnClickLi
                 break;
             case R.id.path_btn_animator:
                 gotoNextActivity(PathActivity.class);
+                break;
+            case R.id.fire_btn_animator:
+                gotoNextActivity(FireWorkActivity.class);
                 break;
             default:
                 break;

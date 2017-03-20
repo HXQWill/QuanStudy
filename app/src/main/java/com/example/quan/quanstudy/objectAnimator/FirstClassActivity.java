@@ -23,7 +23,7 @@ public class FirstClassActivity extends BaseActivity {
 
     @Override
     public int getLayoutId() {
-        return R.layout.activity_first_animator;
+        return R.layout.activity_animator_first;
     }
 
     @Override

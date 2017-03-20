@@ -25,4 +25,10 @@
         android:layout_height="wrap_content"
         android:text="Path" />
 
+    <Button
+        android:id="@+id/fire_btn_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FireWork" />
+
 </LinearLayout>

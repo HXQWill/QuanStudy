@@ -21,6 +21,7 @@
         <activity android:name=".objectAnimator.FirstClassActivity" />
         <activity android:name=".objectAnimator.MainAnimatorActivity" />
         <activity android:name=".objectAnimator.PathActivity" />
+        <activity android:name=".objectAnimator.FireWorkActivity" />
         <activity android:name=".viewDemo.MainViewActivity" />
         <activity android:name=".viewDemo.SimpleActivity" />
         <activity android:name=".viewDemo.ThreeDiyViewActivity" />
