@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.quan.quanstudy.util.ActivityController;
+import com.example.quan.quanstudy.util.LogUtil;
+
 /**
  * Created by xq.he on 2017/3/13.
  */
@@ -15,6 +18,14 @@ public abstract class BaseActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
         initView();
+        LogUtil.d(getClass().getName());
+        ActivityController.addActivity(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ActivityController.removeActivity(this);
     }
 
     public abstract int getLayoutId();
