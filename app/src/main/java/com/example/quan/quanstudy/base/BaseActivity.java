@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.quan.quanstudy.util.ActivityController;
+import com.example.quan.quanstudy.util.CrashHandler;
 import com.example.quan.quanstudy.util.LogUtil;
 
 /**
@@ -20,6 +21,7 @@ public abstract class BaseActivity extends Activity {
         initView();
         LogUtil.d(getClass().getName());
         ActivityController.addActivity(this);
+        CrashHandler.getInstance().init(getApplicationContext());;
     }
 
     @Override

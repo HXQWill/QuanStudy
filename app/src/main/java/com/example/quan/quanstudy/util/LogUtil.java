@@ -4,7 +4,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 /**
- * 更加强大的Log工具，全方位输出类-方法-行数-内容
+ * 更加强大的Log工具，全方位输出类-方法-行数-信息
  * tag自动产生，格式: customTagPrefix:className.methodName(L:lineNumber),
  * customTagPrefix为空时只输出：className.methodName(L:lineNumber)。
  *
