@@ -21,11 +21,11 @@ import java.util.List;
 
 public class PathActivity extends BaseActivity {
 
-    private int res[] = {R.id.a_iv_path,R.id.b_iv_path,R.id.c_iv_path,R.id.d_iv_path,R.id.e_iv_path,
+    private int mResIdArray[] = {R.id.a_iv_path,R.id.b_iv_path,R.id.c_iv_path,R.id.d_iv_path,R.id.e_iv_path,
             R.id.f_iv_path,R.id.g_iv_path,R.id.h_iv_path};
-    private List<ImageView> imageViewList = new ArrayList<ImageView>();
-    private ImageView tempImageView;
-    private boolean flag = true;
+    private List<ImageView> mImageList = new ArrayList<ImageView>();
+    private ImageView mTempImage;
+    private boolean mAnimFlag = true;
 
     @Override
     public int getLayoutId() {
@@ -34,14 +34,14 @@ public class PathActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        for (int i = 0;i < res.length;i++){
-            tempImageView = (ImageView) findViewById(res[i]);
-            tempImageView.setOnClickListener(new View.OnClickListener() {
+        for (int i = 0;i < mResIdArray.length;i++){
+            mTempImage = (ImageView) findViewById(mResIdArray[i]);
+            mTempImage.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     switch (v.getId()){
                         case R.id.a_iv_path:
-                            if (flag){
+                            if (mAnimFlag){
                                 startAnim();
                             }else {
                                 closeAnim();
@@ -53,31 +53,15 @@ public class PathActivity extends BaseActivity {
                     }
                 }
             });
-            imageViewList.add(tempImageView);
+            mImageList.add(mTempImage);
         }
-    }
-
-    private void closeAnim() {
-        for (int i = 1;i < res.length;i++){
-            ObjectAnimator animator1 = ObjectAnimator.ofFloat(imageViewList.get(i),
-                    "translationY",i*300f,0f);
-            ObjectAnimator animator2 = ObjectAnimator.ofFloat(imageViewList.get(i),
-                    "translationX",i*300f,0f);
-            AnimatorSet set = new AnimatorSet();
-            set.playTogether(animator1,animator2);
-            set.setDuration(700);
-            set.setInterpolator(new BounceInterpolator());//设置差值器，重力加速度
-            set.setStartDelay(i*300);
-            set.start();
-        }
-        flag = true;
     }
 
     private void startAnim() {
-        for (int i = 1;i < res.length;i++){
-            ObjectAnimator animator1 = ObjectAnimator.ofFloat(imageViewList.get(i),
+        for (int i = 1;i < mResIdArray.length;i++){
+            ObjectAnimator animator1 = ObjectAnimator.ofFloat(mImageList.get(i),
                     "translationY",0f,10f + i*50f);
-            ObjectAnimator animator2 = ObjectAnimator.ofFloat(imageViewList.get(i),
+            ObjectAnimator animator2 = ObjectAnimator.ofFloat(mImageList.get(i),
                     "translationX",0f,400f - i*50f);
             AnimatorSet set = new AnimatorSet();
             set.playTogether(animator1,animator2);
@@ -86,6 +70,23 @@ public class PathActivity extends BaseActivity {
             set.setStartDelay(i*300);
             set.start();
         }
-        flag = false;
+        mAnimFlag = false;
     }
+
+    private void closeAnim() {
+        for (int i = 1;i < mResIdArray.length;i++){
+            ObjectAnimator animator1 = ObjectAnimator.ofFloat(mImageList.get(i),
+                    "translationY",i*300f,0f);
+            ObjectAnimator animator2 = ObjectAnimator.ofFloat(mImageList.get(i),
+                    "translationX",i*300f,0f);
+            AnimatorSet set = new AnimatorSet();
+            set.playTogether(animator1,animator2);
+            set.setDuration(700);
+            set.setInterpolator(new BounceInterpolator());//设置差值器，重力加速度
+            set.setStartDelay(i*300);
+            set.start();
+        }
+        mAnimFlag = true;
+    }
+
 }
