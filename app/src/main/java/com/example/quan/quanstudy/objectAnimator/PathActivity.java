@@ -24,7 +24,6 @@ public class PathActivity extends BaseActivity {
     private int mResIdArray[] = {R.id.a_iv_path,R.id.b_iv_path,R.id.c_iv_path,R.id.d_iv_path,R.id.e_iv_path,
             R.id.f_iv_path,R.id.g_iv_path,R.id.h_iv_path};
     private List<ImageView> mImageList = new ArrayList<ImageView>();
-    private ImageView mTempImage;
     private boolean mAnimFlag = true;
 
     @Override
@@ -35,8 +34,8 @@ public class PathActivity extends BaseActivity {
     @Override
     public void initView() {
         for (int i = 0;i < mResIdArray.length;i++){
-            mTempImage = (ImageView) findViewById(mResIdArray[i]);
-            mTempImage.setOnClickListener(new View.OnClickListener() {
+            ImageView tempImage = (ImageView) findViewById(mResIdArray[i]);
+            tempImage.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     switch (v.getId()){
@@ -53,7 +52,7 @@ public class PathActivity extends BaseActivity {
                     }
                 }
             });
-            mImageList.add(mTempImage);
+            mImageList.add(tempImage);
         }
     }
 

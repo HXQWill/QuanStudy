@@ -67,6 +67,9 @@ public class LoginActivity extends BaseActivity implements ILoginView, View.OnCl
                 mBtnClear.setEnabled(false);
                 mLoginPresenter.doLogin(mEditUser.getText().toString(), mEditPass.getText().toString());
                 break;
+            default:
+                Toast.makeText(LoginActivity.this,"Default Click.",Toast.LENGTH_SHORT).show();
+                break;
         }
     }
 

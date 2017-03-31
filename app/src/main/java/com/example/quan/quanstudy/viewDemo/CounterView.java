@@ -43,7 +43,7 @@ public class CounterView extends View implements View.OnClickListener {
         mPaint.getTextBounds(text, 0, text.length(), mBounds);
         float textWidth = mBounds.width();
         float textHeight = mBounds.height();
-        canvas.drawText(text, getWidth() / 2 - textWidth / 2, getHeight() / 2
+        canvas.drawText(text, (float)getWidth() / 2 - textWidth / 2, (float)getHeight() / 2
                 + textHeight / 2, mPaint);
     }
 

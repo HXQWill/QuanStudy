@@ -32,6 +32,6 @@ public class SimpleView extends View {
         mPaint.setColor(Color.BLUE);
         mPaint.setTextSize(getResources().getDimensionPixelSize(R.dimen.dd_dimen_26px));
         String text = "Hello View";
-        canvas.drawText(text, 0, getHeight() / 2, mPaint);
+        canvas.drawText(text, 0, (float)getHeight() / 2, mPaint);
     }
 }
