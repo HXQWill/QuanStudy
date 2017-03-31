@@ -12,7 +12,7 @@ import com.example.quan.quanstudy.base.BaseActivity;
  * Mr.Quan
  */
 
-public class MainViewActivity extends BaseActivity implements View.OnClickListener{
+public class MainViewActivity extends BaseActivity {
     private Button mSimpleBtn;
     private Button mDiyBtn;
 
@@ -40,6 +40,7 @@ public class MainViewActivity extends BaseActivity implements View.OnClickListen
     }
 
     public void onClick(View view) {
+        super.onClick(view);
         switch (view.getId()) {
             case R.id.simple_btn_view:
                 gotoNextActivity(SimpleActivity.class);

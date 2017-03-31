@@ -13,7 +13,7 @@ import com.example.quan.quanstudy.design.tablayout.TabLayoutActivity;
  * Mr.Quan
  */
 
-public class MainDesignActivity extends BaseActivity implements View.OnClickListener{
+public class MainDesignActivity extends BaseActivity {
     private Button mFabBtn;
     private Button mScrollBtn;
     private Button mCollapsingBtn;
@@ -47,6 +47,7 @@ public class MainDesignActivity extends BaseActivity implements View.OnClickList
     }
 
     public void onClick(View view) {
+        super.onClick(view);
         switch (view.getId()) {
             case R.id.fab_btn_design:
                 gotoNextActivity(FloatingActionBarActivity.class);

@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.quan.quanstudy.R;
+import com.example.quan.quanstudy.util.Utils;
 
 /**
  * Created by xingquan.he on 2017/3/17.
@@ -33,6 +34,7 @@ public class TabLayoutActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Utils.isFastClick();
                 onBackPressed();
             }
         });

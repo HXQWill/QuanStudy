@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.base.BaseActivity;
+import com.example.quan.quanstudy.util.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +39,7 @@ public class PathActivity extends BaseActivity {
             tempImage.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Utils.isFastClick();
                     switch (v.getId()){
                         case R.id.a_iv_path:
                             if (mAnimFlag){

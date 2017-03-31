@@ -7,7 +7,7 @@ import android.widget.Button;
 import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.base.BaseActivity;
 
-public class MainAnimatorActivity extends BaseActivity implements View.OnClickListener{
+public class MainAnimatorActivity extends BaseActivity {
 
     private Button mFirstBtn;
     private Button mPathBtn;
@@ -39,6 +39,7 @@ public class MainAnimatorActivity extends BaseActivity implements View.OnClickLi
     }
 
     public void onClick(View view) {
+        super.onClick(view);
         switch (view.getId()) {
             case R.id.first_btn_animator:
                 gotoNextActivity(FirstClassActivity.class);

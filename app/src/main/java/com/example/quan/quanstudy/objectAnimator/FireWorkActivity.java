@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.base.BaseActivity;
+import com.example.quan.quanstudy.util.Utils;
 
 import edittext_firework.FireworkView;
 
@@ -35,6 +36,7 @@ public class FireWorkActivity extends BaseActivity{
         mDayMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Utils.isFastClick();
                 mLayout.setBackgroundColor(0xFFFFFFFF);
             }
         });
@@ -42,6 +44,7 @@ public class FireWorkActivity extends BaseActivity{
         mNightMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Utils.isFastClick();
                 mLayout.setBackgroundColor(0xFF000000);
             }
         });

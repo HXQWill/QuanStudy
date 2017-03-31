@@ -15,7 +15,7 @@ import com.example.quan.quanstudy.base.BaseActivity;
  * Created By Quan 2017-3-7
  */
 
-public class MainActivity extends BaseActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity {
 
     private Button mMVPDemo;
     private Button mViewDemo;
@@ -54,6 +54,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        super.onClick(v);
         switch (v.getId()) {
             case R.id.mvp_btn_main:
                 gotoNextActivity(LoginActivity.class);

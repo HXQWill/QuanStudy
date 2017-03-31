@@ -6,6 +6,7 @@ import android.widget.ImageView;
 import com.example.quan.quanlibrary.transition_helper.TransitionsHeleper;
 import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.transitionHelper.BaseTransitionActivity;
+import com.example.quan.quanstudy.util.Utils;
 
 /**
  * Created by xq.he on 2017/03/14.
@@ -22,6 +23,7 @@ public class ImageActivity extends BaseTransitionActivity {
         mStartImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Utils.isFastClick();
                 TransitionsHeleper.startActivity(ImageActivity.this, ImageDetailActivity.class, mStartImage, R.mipmap.quan);
                 finish();
             }

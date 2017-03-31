@@ -9,6 +9,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.example.quan.quanstudy.R;
+import com.example.quan.quanstudy.util.Utils;
 
 /**
  * Created by xingquan.he on 2017/3/15.
@@ -49,6 +50,7 @@ public class CounterView extends View implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        Utils.isFastClick();
         mCount++;
         invalidate();
     }

@@ -16,7 +16,7 @@ import com.example.quan.quanstudy.base.BaseActivity;
  * Created by xingquan.he on 2017/3/7.
  */
 
-public class LoginActivity extends BaseActivity implements ILoginView, View.OnClickListener {
+public class LoginActivity extends BaseActivity implements ILoginView {
 
     private EditText mEditUser;
     private EditText mEditPass;
@@ -57,6 +57,7 @@ public class LoginActivity extends BaseActivity implements ILoginView, View.OnCl
 
     @Override
     public void onClick(View v) {
+        super.onClick(v);
         switch (v.getId()){
             case R.id.btn_login_clear:
                 mLoginPresenter.clear();

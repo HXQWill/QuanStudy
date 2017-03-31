@@ -7,7 +7,7 @@ import android.widget.Button;
 import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.transitionHelper.image.ImageActivity;
 
-public class MainTransitionActivity extends BaseTransitionActivity implements View.OnClickListener{
+public class MainTransitionActivity extends BaseTransitionActivity {
 
     private Button mImageBtn;
 
@@ -33,6 +33,7 @@ public class MainTransitionActivity extends BaseTransitionActivity implements Vi
     }
 
     public void onClick(View view) {
+        super.onClick(view);
         switch (view.getId()) {
             case R.id.image_btn_transition:
                 gotoNextActivity(ImageActivity.class);
