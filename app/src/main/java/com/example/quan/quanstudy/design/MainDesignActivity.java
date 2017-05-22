@@ -3,6 +3,8 @@ package com.example.quan.quanstudy.design;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.base.BaseActivity;
@@ -18,6 +20,7 @@ public class MainDesignActivity extends BaseActivity {
     private Button mScrollBtn;
     private Button mCollapsingBtn;
     private Button mTablayoutBtn;
+    private TextView mSelectorTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,7 @@ public class MainDesignActivity extends BaseActivity {
         mScrollBtn = (Button) findViewById(R.id.scroll_btn_design);
         mCollapsingBtn = (Button) findViewById(R.id.collapsing_btn_design);
         mTablayoutBtn = (Button) findViewById(R.id.tablayout_btn_design);
+        mSelectorTv = (TextView) findViewById(R.id.selector_tv_design);
     }
 
     private void initOnClickListener() {
@@ -44,6 +48,7 @@ public class MainDesignActivity extends BaseActivity {
         mScrollBtn.setOnClickListener(this);
         mCollapsingBtn.setOnClickListener(this);
         mTablayoutBtn.setOnClickListener(this);
+        mSelectorTv.setOnClickListener(this);
     }
 
     public void onClick(View view) {
@@ -60,6 +65,9 @@ public class MainDesignActivity extends BaseActivity {
                 break;
             case R.id.tablayout_btn_design:
                 gotoNextActivity(TabLayoutActivity.class);
+                break;
+            case R.id.selector_tv_design:
+                Toast.makeText(MainDesignActivity.this,"selector_tv_design",Toast.LENGTH_SHORT).show();
                 break;
             default:
                 break;
