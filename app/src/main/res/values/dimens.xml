@@ -13,6 +13,8 @@
     <dimen name="dd_dimen_35px">17.50dp</dimen>
     <dimen name="dd_dimen_36px">18.00dp</dimen>
 
+    <dimen name="dd_dimen_76px">38.00dp</dimen>
+
     <dimen name="dd_dimen_112px">49.78dp</dimen>
 
 </resources>

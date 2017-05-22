@@ -3,4 +3,9 @@
     <color name="showmethod_start_color">#FFFFFF</color>
     <color name="showmethod_end_color">#C8C8C8</color>
     <color name="colorPrimaryDark">#303F9F</color>
+
+    <color name="color_dbac6f">#dbac6f</color>
+    <color name="color_d9d9d9">#d9d9d9</color>
+    <color name="color_fef7ed">#fef7ed</color>
+    <color name="white">#FFFFFF</color>
 </resources>
