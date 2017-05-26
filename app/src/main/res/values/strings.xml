@@ -5,4 +5,5 @@
     <string name="transition_demo">Transition_Demo</string>
     <string name="animator_demo">Animator_Demo</string>
     <string name="design_demo">Design_Demo</string>
+    <string name="ucar_demo">Ucar_Demo</string>
 </resources>

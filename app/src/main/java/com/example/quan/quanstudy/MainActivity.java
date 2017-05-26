@@ -8,6 +8,7 @@ import com.example.quan.quanstudy.design.MainDesignActivity;
 import com.example.quan.quanstudy.mvpLogin.view.LoginActivity;
 import com.example.quan.quanstudy.objectAnimator.MainAnimatorActivity;
 import com.example.quan.quanstudy.transitionHelper.MainTransitionActivity;
+import com.example.quan.quanstudy.ucar.MainUcarActivity;
 import com.example.quan.quanstudy.viewDemo.MainViewActivity;
 import com.example.quan.quanstudy.base.BaseActivity;
 
@@ -22,6 +23,7 @@ public class MainActivity extends BaseActivity {
     private Button mTransitionDemo;
     private Button mObjectAnimatorDemo;
     private Button mDesignDemo;
+    private Button mUcarDemo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class MainActivity extends BaseActivity {
         mTransitionDemo = (Button) findViewById(R.id.transition_btn_main);
         mObjectAnimatorDemo = (Button) findViewById(R.id.animator_btn_main);
         mDesignDemo = (Button) findViewById(R.id.design_btn_main);
+        mUcarDemo = (Button) findViewById(R.id.ucar_btn_main);
     }
 
     private void initOnClickListener() {
@@ -50,6 +53,7 @@ public class MainActivity extends BaseActivity {
         mTransitionDemo.setOnClickListener(this);
         mObjectAnimatorDemo.setOnClickListener(this);
         mDesignDemo.setOnClickListener(this);
+        mUcarDemo.setOnClickListener(this);
     }
 
     @Override
@@ -70,6 +74,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.design_btn_main:
                 gotoNextActivity(MainDesignActivity.class);
+                break;
+            case R.id.ucar_btn_main:
+                gotoNextActivity(MainUcarActivity.class);
                 break;
             default:
                 break;

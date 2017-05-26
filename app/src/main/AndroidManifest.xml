@@ -30,6 +30,21 @@
         <activity android:name=".design.ScrollActivity" />
         <activity android:name=".design.CollapsingActivity" />
         <activity android:name=".design.tablayout.TabLayoutActivity" />
+        <activity
+            android:name=".ucar.MainUcarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseActivityTheme"
+            ></activity>
+        <activity
+            android:name=".ucar.trip.TripListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseActivityTheme"
+            ></activity>
+        <activity
+            android:name=".ucar.trip.TripDoubtActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PopActivityTheme"
+            ></activity>
     </application>
 
 </manifest>

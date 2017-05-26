@@ -17,4 +17,28 @@
         <item name="android:windowTranslucentStatus">true</item> <!--重要-->
     </style>
 
+    <style name="BaseActivityTheme" parent="android:Theme">
+        <item name="android:windowAnimationStyle">@style/BaseAnimation</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="BaseAnimation">
+        <item name="@android:activityOpenEnterAnimation">@anim/left_in</item>
+        <item name="@android:activityOpenExitAnimation">@anim/left_out</item>
+        <item name="@android:activityCloseEnterAnimation">@anim/left_in</item>
+        <item name="@android:activityCloseExitAnimation">@anim/left_out</item>
+    </style>
+
+    <style name="PopActivityTheme" parent="android:Theme">
+        <item name="android:windowAnimationStyle">@style/PopAnimation</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="PopAnimation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_bottom_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_bottom_out</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+    </style>
 </resources>

@@ -54,4 +54,11 @@
         android:layout_height="wrap_content"
         android:text="@string/design_demo"
         />
+
+    <Button
+        android:id="@+id/ucar_btn_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ucar_demo"
+        />
 </LinearLayout>
