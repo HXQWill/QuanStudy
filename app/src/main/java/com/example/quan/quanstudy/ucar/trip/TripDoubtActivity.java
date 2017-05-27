@@ -27,6 +27,18 @@ public class TripDoubtActivity extends BaseActivity {
 
     @Override
     public void initView() {
+        initTitle(R.string.trip_doubt);
+        findViewById(R.id.back_title).setOnClickListener(this);
+    }
 
+    @Override
+    public void onClick(View v) {
+        super.onClick(v);
+        switch (v.getId()) {
+            case R.id.back_title:
+                finish();
+            default:
+                break;
+        }
     }
 }

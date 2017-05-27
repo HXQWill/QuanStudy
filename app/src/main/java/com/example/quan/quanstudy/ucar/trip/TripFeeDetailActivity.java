@@ -1,4 +1,4 @@
-package com.example.quan.quanstudy.ucar;
+package com.example.quan.quanstudy.ucar.trip;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,51 +6,63 @@ import android.widget.Button;
 
 import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.base.BaseActivity;
-import com.example.quan.quanstudy.ucar.trip.TripFeeDetailActivity;
+
+import view.MoreWidget;
 
 /**
  * Created by xingquan.he on 2017/5/23.
  * Mr.Quan
  */
 
-public class MainUcarActivity extends BaseActivity {
+public class TripFeeDetailActivity extends BaseActivity {
 
-    private Button mTripDemo;
+//    private Button mDoubtDemo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         initOnClickListener();
+        initMore();
     }
 
     @Override
     public int getLayoutId() {
-        return R.layout.activity_ucar;
+        return R.layout.activity_ucar_tripfeedetail;
     }
 
     @Override
     public void initView() {
-        mTripDemo = (Button) findViewById(R.id.trip_btn_ucar);
-        initTitle(R.string.ucar);
+//        mDoubtDemo = (Button) findViewById(R.id.trip_doubt_btn_ucar);
+        initTitle(R.string.trip_feedetail);
         findViewById(R.id.back_title).setOnClickListener(this);
     }
 
     private void initOnClickListener() {
-        mTripDemo.setOnClickListener(this);
+//        mDoubtDemo.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         super.onClick(v);
         switch (v.getId()) {
-            case R.id.trip_btn_ucar:
-                gotoNextActivity(TripFeeDetailActivity.class);
-                break;
             case R.id.back_title:
                 finish();
             default:
                 break;
         }
+    }
+
+    /**
+     * 初始化更多，疑义，计价规则
+     */
+    private void initMore() {
+        initTitleMore();
+        addTitleMoreItem(R.drawable.trip_detail_doubt, getString(R.string.trip_doubt), new MoreWidget.ClickCallback() {
+            @Override
+            public void callback() {
+                gotoNextActivity(TripDoubtActivity.class);
+            }
+        });
     }
 }

@@ -36,12 +36,13 @@
             android:theme="@style/BaseActivityTheme"
             ></activity>
         <activity
-            android:name=".ucar.trip.TripListActivity"
+            android:name=".ucar.trip.TripFeeDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/BaseActivityTheme"
             ></activity>
         <activity
             android:name=".ucar.trip.TripDoubtActivity"
+            android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/PopActivityTheme"
             ></activity>

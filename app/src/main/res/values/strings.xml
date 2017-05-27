@@ -6,4 +6,7 @@
     <string name="animator_demo">Animator_Demo</string>
     <string name="design_demo">Design_Demo</string>
     <string name="ucar_demo">Ucar_Demo</string>
+    <string name="ucar">神州专车</string>
+    <string name="trip_feedetail">费用明细</string>
+    <string name="trip_doubt">账单疑义</string>
 </resources>

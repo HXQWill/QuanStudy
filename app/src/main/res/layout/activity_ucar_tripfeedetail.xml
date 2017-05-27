@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f4f2">
+
+    <include
+        android:id="@+id/tripfeedetail_title"
+        layout="@layout/base_title_layout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello 费用明细!"
+        android:layout_below="@id/tripfeedetail_title"
+        android:layout_marginTop="@dimen/dd_dimen_45px"
+        />
+
+    <include
+        layout="@layout/base_title_more_layout" />
+
+</RelativeLayout>

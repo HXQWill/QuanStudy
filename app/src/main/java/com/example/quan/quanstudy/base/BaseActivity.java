@@ -4,17 +4,24 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.util.ActivityController;
 import com.example.quan.quanstudy.util.CrashHandler;
 import com.example.quan.quanstudy.util.LogUtil;
 import com.example.quan.quanstudy.util.Utils;
+
+import view.MoreWidget;
 
 /**
  * Created by xq.he on 2017/3/13.
  */
 
 public abstract class BaseActivity extends Activity implements View.OnClickListener{
+
+    private MoreWidget more_widget;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,4 +54,45 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
             return;
         }
     }
+
+    public void initTitle(int titleReId) {
+        TextView titleTx = (TextView) findViewById(R.id.base_title);
+        titleTx.setText(getString(titleReId));
+    }
+
+    public void initTitleMore() {
+        ImageView more = (ImageView) findViewById(R.id.more);
+        if (more != null) {
+            more.setVisibility(View.VISIBLE);
+            more_widget = (MoreWidget) findViewById(R.id.more_layout);
+            more.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (more_widget != null) {
+                        more_widget.show();
+                    }
+                }
+            });
+        }
+    }
+
+    public void removeAllMoreItem(){
+        if (more_widget != null) {
+            more_widget.removeAllItems();
+        }
+    }
+
+    public void addTitleMoreItem(String iconUrl, String content, MoreWidget.ClickCallback clickCallback) {
+        if (more_widget != null) {
+            more_widget.addItem(iconUrl, content, clickCallback);
+        }
+    }
+
+    public void addTitleMoreItem(int iconId, String content, MoreWidget.ClickCallback clickCallback) {
+        if (more_widget != null) {
+            more_widget.addItem(iconId, content, clickCallback);
+        }
+    }
+
+
 }
