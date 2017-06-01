@@ -8,6 +8,9 @@ import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.base.BaseActivity;
 import com.example.quan.quanstudy.ucar.trip.TripFeeDetailActivity;
 
+import monitor.M;
+import monitor.Keys;
+
 /**
  * Created by xingquan.he on 2017/5/23.
  * Mr.Quan
@@ -45,6 +48,7 @@ public class MainUcarActivity extends BaseActivity {
         super.onClick(v);
         switch (v.getId()) {
             case R.id.trip_btn_ucar:
+                M.monitor().onEvent(context, Keys.UCAR_TRIPFEEDETAIL);
                 gotoNextActivity(TripFeeDetailActivity.class);
                 break;
             case R.id.back_title:

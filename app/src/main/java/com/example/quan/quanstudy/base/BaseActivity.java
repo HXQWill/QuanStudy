@@ -1,6 +1,7 @@
 package com.example.quan.quanstudy.base;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ import com.example.quan.quanstudy.util.CrashHandler;
 import com.example.quan.quanstudy.util.LogUtil;
 import com.example.quan.quanstudy.util.Utils;
 
+import monitor.M;
 import view.MoreWidget;
 
 /**
@@ -21,16 +23,32 @@ import view.MoreWidget;
 
 public abstract class BaseActivity extends Activity implements View.OnClickListener{
 
+    public Context context;
+
     private MoreWidget more_widget;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        M.monitor().enableEncrypt(true);
+        context = this;
         setContentView(getLayoutId());
         initView();
         LogUtil.d(getClass().getName());
         ActivityController.addActivity(this);
-        CrashHandler.getInstance().init(getApplicationContext());;
+        CrashHandler.getInstance().init(getApplicationContext());
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        M.monitor().onPause(context);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        M.monitor().onResume(context);
     }
 
     @Override

@@ -12,6 +12,9 @@ import com.example.quan.quanstudy.ucar.MainUcarActivity;
 import com.example.quan.quanstudy.viewDemo.MainViewActivity;
 import com.example.quan.quanstudy.base.BaseActivity;
 
+import monitor.M;
+import monitor.Keys;
+
 /**
  * Created By Quan 2017-3-7
  */
@@ -28,7 +31,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        M.monitor().setDebugMode(true);
         initOnClickListener();
     }
 
@@ -76,6 +79,7 @@ public class MainActivity extends BaseActivity {
                 gotoNextActivity(MainDesignActivity.class);
                 break;
             case R.id.ucar_btn_main:
+                M.monitor().onEvent(context, Keys.MAIN_UCAR);
                 gotoNextActivity(MainUcarActivity.class);
                 break;
             default:
