@@ -79,7 +79,7 @@ public class MainActivity extends BaseActivity {
                 gotoNextActivity(MainDesignActivity.class);
                 break;
             case R.id.ucar_btn_main:
-                M.monitor().onEvent(context, Keys.MAIN_UCAR);
+                M.monitor().onEvent(mContext, Keys.MAIN_UCAR);
                 gotoNextActivity(MainUcarActivity.class);
                 break;
             default:

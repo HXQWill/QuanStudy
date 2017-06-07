@@ -14,7 +14,7 @@
         layout="@layout/base_title_layout" />
 
     <Button
-        android:id="@+id/trip_btn_ucar"
+        android:id="@+id/tripfee_btn_ucar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dd_dimen_76px"
         android:text="费用明细"
@@ -27,7 +27,20 @@
         android:layout_marginTop="@dimen/dd_dimen_45px"
         android:layout_below="@id/ucar_title"
         android:gravity="center"
-
+        />
+    <Button
+        android:id="@+id/feedback_btn_ucar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dd_dimen_76px"
+        android:text="意见反馈"
+        android:textColor="@drawable/common_button_textcolor_selector"
+        android:textSize="@dimen/dd_dimen_32px"
+        android:background="@drawable/common_button_selector"
+        android:layout_marginBottom="@dimen/dd_dimen_10px"
+        android:layout_marginLeft="@dimen/dd_dimen_36px"
+        android:layout_marginRight="@dimen/dd_dimen_36px"
+        android:layout_marginTop="@dimen/dd_dimen_45px"
+        android:gravity="center"
         />
 
 </LinearLayout>

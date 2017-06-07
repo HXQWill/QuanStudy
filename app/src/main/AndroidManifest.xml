@@ -46,6 +46,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/PopActivityTheme"
             ></activity>
+        <activity
+            android:name=".ucar.usercenter.FeedBackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseActivityTheme"
+            ></activity>
     </application>
 
 </manifest>

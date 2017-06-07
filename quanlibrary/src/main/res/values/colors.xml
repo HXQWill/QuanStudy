@@ -7,11 +7,14 @@
     <color name="color_dbac6f">#dbac6f</color>
     <color name="color_d9d9d9">#d9d9d9</color>
     <color name="color_fef7ed">#fef7ed</color>
-    <color name="white">#FFFFFF</color>
     <color name="color_373635">#373635</color>
     <color name="color_deb682">#deb682</color>
     <color name="color_434241">#434241</color>
     <color name="color_f5f4f2">#f5f4f2</color>
+    <color name="color_e5e5e5">#e5e5e5</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_999999">#999999</color>
 
+    <color name="white">#FFFFFF</color>
     <color name="login_divider">#dcdcdc</color>
 </resources>

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,9 +22,9 @@ import view.MoreWidget;
  * Created by xq.he on 2017/3/13.
  */
 
-public abstract class BaseActivity extends Activity implements View.OnClickListener{
+public abstract class BaseActivity extends Activity implements View.OnClickListener {
 
-    public Context context;
+    public Context mContext;
 
     private MoreWidget more_widget;
 
@@ -31,7 +32,7 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         M.monitor().enableEncrypt(true);
-        context = this;
+        mContext = this;
         setContentView(getLayoutId());
         initView();
         LogUtil.d(getClass().getName());
@@ -42,13 +43,13 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
     @Override
     protected void onPause() {
         super.onPause();
-        M.monitor().onPause(context);
+        M.monitor().onPause(mContext);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        M.monitor().onResume(context);
+        M.monitor().onResume(mContext);
     }
 
     @Override
@@ -94,7 +95,7 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
         }
     }
 
-    public void removeAllMoreItem(){
+    public void removeAllMoreItem() {
         if (more_widget != null) {
             more_widget.removeAllItems();
         }
@@ -112,5 +113,14 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
         }
     }
 
+    /**
+     * 隐藏软键盘
+     */
+    public void hideInputMethod() {
+        InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (imm != null && this.getCurrentFocus() != null) {
+            imm.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
+        }
+    }
 
 }

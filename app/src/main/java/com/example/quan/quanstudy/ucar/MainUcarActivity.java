@@ -7,6 +7,7 @@ import android.widget.Button;
 import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.base.BaseActivity;
 import com.example.quan.quanstudy.ucar.trip.TripFeeDetailActivity;
+import com.example.quan.quanstudy.ucar.usercenter.FeedBackActivity;
 
 import monitor.M;
 import monitor.Keys;
@@ -18,7 +19,8 @@ import monitor.Keys;
 
 public class MainUcarActivity extends BaseActivity {
 
-    private Button mTripDemo;
+    private Button mTripFeeDemo;
+    private Button mFeedBackDemo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,22 +36,27 @@ public class MainUcarActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        mTripDemo = (Button) findViewById(R.id.trip_btn_ucar);
+        mTripFeeDemo = (Button) findViewById(R.id.tripfee_btn_ucar);
+        mFeedBackDemo = (Button) findViewById(R.id.feedback_btn_ucar);
         initTitle(R.string.ucar);
         findViewById(R.id.back_title).setOnClickListener(this);
     }
 
     private void initOnClickListener() {
-        mTripDemo.setOnClickListener(this);
+        mTripFeeDemo.setOnClickListener(this);
+        mFeedBackDemo.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         super.onClick(v);
         switch (v.getId()) {
-            case R.id.trip_btn_ucar:
-                M.monitor().onEvent(context, Keys.UCAR_TRIPFEEDETAIL);
+            case R.id.tripfee_btn_ucar:
+                M.monitor().onEvent(mContext, Keys.UCAR_TRIPFEEDETAIL);
                 gotoNextActivity(TripFeeDetailActivity.class);
+                break;
+            case R.id.feedback_btn_ucar:
+                gotoNextActivity(FeedBackActivity.class);
                 break;
             case R.id.back_title:
                 finish();

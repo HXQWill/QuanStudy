@@ -9,4 +9,11 @@
     <string name="ucar">神州专车</string>
     <string name="trip_feedetail">费用明细</string>
     <string name="trip_doubt">账单疑义</string>
+    <string name="feedback">意见反馈</string>
+
+    <string name="input_feedback_hint">您的要求是我们努力的方向，期待听到您的声音</string>
+    <string name="default_feedback_words">%s/200</string>
+    <string name="please_input_feedback_tip">请输入反馈信息</string>
+    <string name="feedback_success">提交成功</string>
+    <string name="input_feedback_content_long">您的输入已经超过限制！</string>
 </resources>
