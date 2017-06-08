@@ -1,5 +1,6 @@
 package monitor;
 
+import android.app.Application;
 import android.content.Context;
 
 /**
@@ -9,9 +10,11 @@ import android.content.Context;
 
 public interface MonitorManager {
 
-    void onPause(Context context);
+    void initConfig(Application application);
 
-    void onResume(Context context);
+    void onPause(Context context,String activityName);
+
+    void onResume(Context context,String activityName);
 
     void enableEncrypt(boolean enable);
 

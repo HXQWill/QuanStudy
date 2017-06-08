@@ -1,6 +1,7 @@
 package com.example.quan.quanstudy.base;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -43,13 +44,13 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
     @Override
     protected void onPause() {
         super.onPause();
-        M.monitor().onPause(mContext);
+        M.monitor().onPause(mContext,getActivityName());
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        M.monitor().onResume(mContext);
+        M.monitor().onResume(mContext,getActivityName());
     }
 
     @Override
@@ -121,6 +122,15 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
         if (imm != null && this.getCurrentFocus() != null) {
             imm.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
         }
+    }
+
+    /**
+     * 得到Activities栈顶的Activity名称
+     */
+    private String getActivityName(){
+        ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+        ActivityManager.RunningTaskInfo info = manager.getRunningTasks(1).get(0);
+        return info.topActivity.getShortClassName(); //类名
     }
 
 }

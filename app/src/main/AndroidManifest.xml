@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.quan.quanstudy">
 
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icon"
@@ -33,24 +35,20 @@
         <activity
             android:name=".ucar.MainUcarActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/BaseActivityTheme"
-            ></activity>
+            android:theme="@style/BaseActivityTheme"></activity>
         <activity
             android:name=".ucar.trip.TripFeeDetailActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/BaseActivityTheme"
-            ></activity>
+            android:theme="@style/BaseActivityTheme"></activity>
         <activity
             android:name=".ucar.trip.TripDoubtActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:theme="@style/PopActivityTheme"
-            ></activity>
+            android:theme="@style/PopActivityTheme"></activity>
         <activity
             android:name=".ucar.usercenter.FeedBackActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/BaseActivityTheme"
-            ></activity>
+            android:theme="@style/BaseActivityTheme"></activity>
     </application>
 
 </manifest>
