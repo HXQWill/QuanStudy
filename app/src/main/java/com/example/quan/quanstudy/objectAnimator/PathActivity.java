@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.base.BaseActivity;
-import com.example.quan.quanstudy.util.Utils;
+import com.example.quan.util.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

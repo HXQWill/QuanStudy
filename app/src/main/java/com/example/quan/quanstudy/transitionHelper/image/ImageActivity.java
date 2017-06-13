@@ -6,7 +6,7 @@ import android.widget.ImageView;
 import com.example.quan.quanlibrary.transition_helper.TransitionsHeleper;
 import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.transitionHelper.BaseTransitionActivity;
-import com.example.quan.quanstudy.util.Utils;
+import com.example.quan.util.Utils;
 
 /**
  * Created by xq.he on 2017/03/14.

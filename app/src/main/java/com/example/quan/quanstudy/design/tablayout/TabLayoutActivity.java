@@ -9,7 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.quan.quanstudy.R;
-import com.example.quan.quanstudy.util.Utils;
+import com.example.quan.util.Utils;
 
 /**
  * Created by xingquan.he on 2017/3/17.

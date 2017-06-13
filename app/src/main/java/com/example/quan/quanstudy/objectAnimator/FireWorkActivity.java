@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.base.BaseActivity;
-import com.example.quan.quanstudy.util.Utils;
+import com.example.quan.util.Utils;
 
 import edittext_firework.FireworkView;
 

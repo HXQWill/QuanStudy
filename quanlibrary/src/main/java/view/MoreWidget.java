@@ -14,7 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.quan.quanlibrary.R;
-import com.example.quan.quanstudy.util.Utils;
+import com.example.quan.util.Utils;
 
 /**
  * 4.0版本 Acitivity右上角更多组件

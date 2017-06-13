@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.example.quan.quanstudy.R;
 import com.example.quan.quanstudy.base.BaseActivity;
-import com.example.quan.quanstudy.util.Utils;
+import com.example.quan.util.Utils;
 
 /**
  * Created by xingquan.he on 2017/6/2.

@@ -1,4 +1,4 @@
-package com.example.quan.quanstudy.util;
+package com.example.quan.util;
 
 import android.text.TextUtils;
 
